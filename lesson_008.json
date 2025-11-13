@@ -1,0 +1,32 @@
+{
+  "lesson_id": "lesson_008",
+  "title": "Weather",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 3.2,
+  "speaker": "teacher_david",
+  "audio_file": "lesson_008.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "Sunny"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 1.6,
+      "text": "Rainy"
+    },
+    {
+      "start_sec": 1.6,
+      "end_sec": 2.4,
+      "text": "Cloudy"
+    },
+    {
+      "start_sec": 2.4,
+      "end_sec": 3.2,
+      "text": "Windy"
+    }
+  ]
+}

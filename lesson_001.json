@@ -1,0 +1,27 @@
+{
+  "lesson_id": "lesson_001",
+  "title": "Hello and Goodbye",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 4.0,
+  "speaker": "teacher_sarah",
+  "audio_file": "lesson_001.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "Hello!"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 3.2,
+      "text": "How are you?"
+    },
+    {
+      "start_sec": 3.2,
+      "end_sec": 4.0,
+      "text": "Goodbye!"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "lesson_id": "lesson_007",
+  "title": "Animals",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 3.2,
+  "speaker": "teacher_emma",
+  "audio_file": "lesson_007.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "Dog"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 1.6,
+      "text": "Cat"
+    },
+    {
+      "start_sec": 1.6,
+      "end_sec": 2.4,
+      "text": "Bird"
+    },
+    {
+      "start_sec": 2.4,
+      "end_sec": 3.2,
+      "text": "Fish"
+    }
+  ]
+}

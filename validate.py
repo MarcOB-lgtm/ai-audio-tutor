@@ -1,0 +1,71 @@
+#!/usr/bin/env python3
+import json, glob, sys, os
+from jsonschema import Draft202012Validator
+try:
+    import pydub
+except ImportError:
+    print("Installing pydub...")
+    os.system("pip3 install --quiet pydub > /dev/null")
+    import pydub
+
+with open("ai-audio-tutor-schema.json") as f:
+    SCHEMA = json.load(f)
+validator = Draft202012Validator(SCHEMA)
+
+def get_mp3_duration(file_path):
+    try:
+        audio = pydub.AudioSegment.from_file(file_path)
+        return len(audio) / 1000.0
+    except:
+        return None
+
+def validate_file(filepath):
+    try:
+        with open(filepath) as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"{filepath} → JSON ERROR: {e}")
+        return False
+
+    # Audio file + duration check
+    audio_file = data.get("audio_file")
+    if audio_file:
+        if not os.path.exists(audio_file):
+            print(f"{filepath} → WARNING: Audio '{audio_file}' missing!")
+        else:
+            real_dur = get_mp3_duration(audio_file)
+            declared_dur = data.get("duration_sec")
+            if real_dur and abs(real_dur - declared_dur) > 0.5:
+                print(f"{filepath} → WARNING: Duration mismatch! JSON: {declared_dur}s, MP3: {real_dur:.2f}s")
+
+    # end_sec > start_sec
+    custom_errors = []
+    for i, seg in enumerate(data.get("segments", [])):
+        s, e = seg.get("start_sec"), seg.get("end_sec")
+        if s is not None and e is not None and e <= s:
+            custom_errors.append(f"segments[{i}].end_sec ({e}) ≤ start_sec ({s})")
+
+    schema_errors = list(validator.iter_errors(data))
+    all_errors = schema_errors + [type('e', (), {'message': m, 'path': []}) for m in custom_errors]
+
+    if not all_errors:
+        print(f"{filepath} → PASS")
+        return True
+    else:
+        print(f"{filepath} → FAIL ({len(all_errors)} errors)")
+        for i, err in enumerate(all_errors[:3], 1):
+            path = ".".join(str(p) for p in getattr(err, 'path', [])) or "root"
+            print(f"   {i}. {path}: {err.message}")
+        if len(all_errors) > 3:
+            print(f"   ... and {len(all_errors)-3} more")
+        return False
+
+files = glob.glob("lesson_*.json")
+if not files:
+    print("No lessons found!")
+    sys.exit(1)
+
+print("Validating AI Audio Tutor lessons...\n")
+passed = sum(validate_file(f) for f in sorted(files))
+print(f"\nSummary: {passed}/{len(files)} passed")
+sys.exit(0 if passed == len(files) else 1)

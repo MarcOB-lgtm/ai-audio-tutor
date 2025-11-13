@@ -1,0 +1,32 @@
+{
+  "lesson_id": "lesson_003",
+  "title": "Family Members",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 3.2,
+  "speaker": "teacher_amy",
+  "audio_file": "lesson_003.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "Mother"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 1.6,
+      "text": "Father"
+    },
+    {
+      "start_sec": 1.6,
+      "end_sec": 2.4,
+      "text": "Sister"
+    },
+    {
+      "start_sec": 2.4,
+      "end_sec": 3.2,
+      "text": "Brother"
+    }
+  ]
+}

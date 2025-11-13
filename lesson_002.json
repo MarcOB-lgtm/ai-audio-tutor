@@ -1,0 +1,62 @@
+{
+  "lesson_id": "lesson_002",
+  "title": "Numbers 1 to 10",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 8.0,
+  "speaker": "teacher_john",
+  "audio_file": "lesson_002.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "One"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 1.6,
+      "text": "Two"
+    },
+    {
+      "start_sec": 1.6,
+      "end_sec": 2.4,
+      "text": "Three"
+    },
+    {
+      "start_sec": 2.4,
+      "end_sec": 3.2,
+      "text": "Four"
+    },
+    {
+      "start_sec": 3.2,
+      "end_sec": 4.0,
+      "text": "Five"
+    },
+    {
+      "start_sec": 4.0,
+      "end_sec": 4.8,
+      "text": "Six"
+    },
+    {
+      "start_sec": 4.8,
+      "end_sec": 5.6,
+      "text": "Seven"
+    },
+    {
+      "start_sec": 5.6,
+      "end_sec": 6.4,
+      "text": "Eight"
+    },
+    {
+      "start_sec": 6.4,
+      "end_sec": 7.2,
+      "text": "Nine"
+    },
+    {
+      "start_sec": 7.2,
+      "end_sec": 8.0,
+      "text": "Ten"
+    }
+  ]
+}

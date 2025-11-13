@@ -1,0 +1,32 @@
+{
+  "lesson_id": "lesson_009",
+  "title": "Time",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 3.2,
+  "speaker": "teacher_nina",
+  "audio_file": "lesson_009.mp3",
+  "recording_date": "2025-11-13",
+  "segments": [
+    {
+      "start_sec": 0.0,
+      "end_sec": 0.8,
+      "text": "Morning"
+    },
+    {
+      "start_sec": 0.8,
+      "end_sec": 1.6,
+      "text": "Afternoon"
+    },
+    {
+      "start_sec": 1.6,
+      "end_sec": 2.4,
+      "text": "Evening"
+    },
+    {
+      "start_sec": 2.4,
+      "end_sec": 3.2,
+      "text": "Night"
+    }
+  ]
+}
