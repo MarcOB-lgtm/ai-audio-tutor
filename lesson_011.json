@@ -1,0 +1,16 @@
+{
+  "lesson_id": "lesson_011",
+  "title": "My New Lesson",
+  "level": "beginner",
+  "language": "en",
+  "duration_sec": 12.0,
+  "speaker": "teacher_you",
+  "audio_file": "lesson_011.mp3",
+  "recording_date": "2025-11-14”,
+  "segments": [
+    { "start_sec": 0.0, "end_sec": 3.0, "text": "First part" },
+    { "start_sec": 3.0, "end_sec": 6.0, "text": "Second part" },
+    { "start_sec": 6.0, "end_sec": 12.0, "text": "Third part" }
+  ]
+}
+
